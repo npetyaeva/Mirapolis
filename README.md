@@ -1,3 +1,7 @@
+### Финальная версия тестов → [branch feature/final](https://github.com/npetyaeva/Mirapolis/tree/feature/final)
+---------------
+
+
 #### Mirapolis
 ## UI-тесты на проверку работы функциональности страницы входа в систему
 Страница входа расположена по адресу https://lmslite47vr.demo.mirapolis.ru/mira

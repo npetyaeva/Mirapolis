@@ -10,7 +10,7 @@ public class RecoveryPage {
     private final SelenideElement linkBackLoginPage = $(By.className("mira-page-forgot-password-link"));
     private final SelenideElement submitBtn = $(By.className("mira-page-forgot-password-button"));
     private final String textCorrectLoginEmail = "На ваш электронный адрес отправлена инструкция по восстановлению пароля.";
-    private final String textWrongLoginEmail = "Пользователь с таким именем не найден.";
+    private final String textIncorrectLoginEmail = "Пользователь с таким именем не найден.";
 
     public void clickLinkBackLoginPage() {
         linkBackLoginPage.click();
@@ -29,6 +29,6 @@ public class RecoveryPage {
     }
 
     public boolean textAlertWrongLoginEmail(String text) {
-        return text.contains(textWrongLoginEmail);
+        return text.contains(textIncorrectLoginEmail);
     }
 }

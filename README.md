@@ -37,11 +37,7 @@
 
 
 **Программное окружение**
-
-Windows 7 Professional
-
-Google Chrome Версия 96
-
-Java 11
-
-IntelliJ IDEA Community
+- Windows 7 Professional
+- Google Chrome Версия 96
+- Java 11
+- IntelliJ IDEA Community

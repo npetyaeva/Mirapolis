@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LoginPageTest {
     private final LoginPage loginPage = new LoginPage();
-    private final ProfilePage profilePage = new ProfilePage("Фомина Елена Сергеевна");
+    private final ProfilePage profilePage = new ProfilePage();
     private final RecoveryPage recoveryPage = new RecoveryPage();
 
     // 1. Авторизация с корректными данными (fominaelena/1P73BP4Z)
@@ -19,7 +19,7 @@ public class LoginPageTest {
     public void shouldAuthorizationWithCorrectData() {
         loginPage.open();
         loginPage.fillOutForm("fominaelena", "1P73BP4Z");
-        assertTrue(profilePage.avatarFullName(), "The login and password are correct, but the authorization failed");
+        assertTrue(profilePage.avatarFullName("Фомина Елена Сергеевна"), "The login and password are correct, but the authorization failed");
         profilePage.logOut();
     }
 
@@ -29,7 +29,7 @@ public class LoginPageTest {
     public void shouldCheckLoginWithSpaces() {
         loginPage.open();
         loginPage.fillOutForm("  fominaelena  ", "1P73BP4Z");
-        assertTrue(profilePage.avatarFullName(), "The login and password are correct, but the authorization failed");
+        assertTrue(profilePage.avatarFullName("Фомина Елена Сергеевна"), "The login and password are correct, but the authorization failed");
         profilePage.logOut();
     }
 
@@ -39,7 +39,7 @@ public class LoginPageTest {
     public void shouldCheckPasswordWithSpaces() {
         loginPage.open();
         loginPage.fillOutForm("fominaelena", "  1P73BP4Z  ");
-        assertTrue(profilePage.avatarFullName(), "The login and password are correct, but the authorization failed");
+        assertTrue(profilePage.avatarFullName("Фомина Елена Сергеевна"), "The login and password are correct, but the authorization failed");
         profilePage.logOut();
     }
 
@@ -133,7 +133,7 @@ public class LoginPageTest {
     public void shouldCheckLoginIfChangeCase() {
         loginPage.open();
         loginPage.fillOutForm("FOMINAELENA", "1P73BP4Z");
-        assertTrue(profilePage.avatarFullName());
+        assertTrue(profilePage.avatarFullName("Фомина Елена Сергеевна"));
         profilePage.logOut();
     }
 

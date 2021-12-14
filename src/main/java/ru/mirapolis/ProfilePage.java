@@ -8,13 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ProfilePage {
 
-    private final String userFullName;
-
-    public ProfilePage(String userFullName) {
-        this.userFullName = userFullName;
-    }
-
-    public boolean avatarFullName() {
+    public boolean avatarFullName(String userFullName) {
         return Objects.requireNonNull($(By.className("avatar-full-name")).getAttribute("title")).contains(userFullName);
     }
 

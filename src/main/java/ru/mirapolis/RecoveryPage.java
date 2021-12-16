@@ -6,9 +6,9 @@ import org.openqa.selenium.By;
 import static com.codeborne.selenide.Selenide.$;
 
 public class RecoveryPage {
-    private final SelenideElement fieldLoginOrEmail = $(By.name("loginOrEmail"));
-    private final SelenideElement linkBackLoginPage = $(By.className("mira-page-forgot-password-link"));
-    private final SelenideElement submitBtn = $(By.className("mira-page-forgot-password-button"));
+    private final SelenideElement fieldLoginOrEmail = $("[name = 'loginOrEmail']");
+    private final SelenideElement linkBackLoginPage = $(".mira-page-forgot-password-link");
+    private final SelenideElement submitBtn = $(".mira-page-forgot-password-button");
     private final String textCorrectLoginEmail = "На ваш электронный адрес отправлена инструкция по восстановлению пароля.";
     private final String textIncorrectLoginEmail = "Пользователь с таким именем не найден.";
 

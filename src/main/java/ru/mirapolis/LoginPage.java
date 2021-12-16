@@ -8,11 +8,11 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage {
     private final String currentUrl = "https://lmslite47vr.demo.mirapolis.ru/mira";
-    private final SelenideElement userLogin = $(By.name("user"));
-    private final SelenideElement userPassword = $(By.name("password"));
-    private final SelenideElement singInBtn = $(By.id("button_submit_login_form"));
-    private final SelenideElement linkForgotPassword = $(By.className("mira-default-login-page-link"));
-    private final SelenideElement iconShowPassword = $(By.id("show_password"));
+    private final SelenideElement userLogin = $("[name = 'user']");
+    private final SelenideElement userPassword = $("[name = 'password']");
+    private final SelenideElement singInBtn = $("#button_submit_login_form");
+    private final SelenideElement linkForgotPassword = $(".mira-default-login-page-link");
+    private final SelenideElement iconShowPassword = $("#show_password");
     private final String textWrongLoginPassword = "Неверные данные для авторизации";
 
     public void open() {
